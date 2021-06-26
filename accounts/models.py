@@ -9,7 +9,7 @@ class User(AbstractUser):
                                  null=False)
     phone = models.CharField(max_length=20, blank=True, null=False)
     avatar = models.ImageField(upload_to='avatars/', null=True, blank=True)
-    thumbnail = models.ImageField(upload_to="users-thumbnails/%Y/%m/%d/", null=True)
+    # thumbnail = models.ImageField(upload_to="users-thumbnails/%Y/%m/%d/", null=True)
     username = None
     email = models.EmailField('email address', unique=True)
     USERNAME_FIELD = 'email'
